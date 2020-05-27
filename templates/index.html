@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    School Library
+{% endblock %}
+
+{% block body %}
+    <h1 class="display-3 text-center">Library</h1>
+
+    <form class="mt-5" action="{{ url_for('books') }}" method="post">
+
+        <div class="form-group d-flex">
+            <input class="form-control mr-2" type="text" name="search_input" placeholder="Search for a Book...">
+            <input class="form-control btn btn-primary w-25" type="submit" value="Search">
+        </div>
+
+    </form>
+{% endblock %}

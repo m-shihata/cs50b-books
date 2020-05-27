@@ -1,3 +1,12 @@
+class Author:
+     
+    def __init__(self, name):
+         self.name = name
+    
+    def __repr__(self):
+        return self.name
+
+         
 class Book:
 
     def __init__(self, isbn, title, author, year):
@@ -15,13 +24,14 @@ class Book:
 
 def main():
     
-    # Create book 1 & Print details about it 
-    b1 = Book(isbn="0380795272", title="Krondor: The Betrayal", author="Raymond E. Feist", year=1990)
+    a1 = Author("Raymond E. Feist")
+    b1 = Book(isbn="0380795272", title="Krondor: The Betrayal", author=a1, year=1990)
     b1.print_info()
 
     print()
     
-    b2 = Book(isbn="1416949658", title="The Dark Is Rising",author="Susan Cooper", year=1973)
+    a2 = Author("Susan Cooper")
+    b2 = Book(isbn="1416949658", title="The Dark Is Rising",author=a2, year=1973)
     b2.print_info()
 
 
