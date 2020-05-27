@@ -1,0 +1,5 @@
+Flask
+Flask-Session
+gunicorn
+Werkzeug==0.15.6
+Flask-SQLAlchemy
