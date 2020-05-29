@@ -5,14 +5,10 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Book Details</h1>
-
+    <h1>About {{ book.title }}</h1>
     <ul>
-        <li>Title: {{ book.title }}</li>
-        <li>Author: {{ author.name }} minutes</li>
+        <li>Author: <a href="/author/{{ author.id }}" title="Find more books of this author">{{ author.name }}</a></li>
         <li>Year: {{ book.year }}</li>
         <li>isbn: {{ book.isbn }}</li>
     </ul>
-
-
 {% endblock %}
