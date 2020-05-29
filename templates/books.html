@@ -5,15 +5,26 @@
 {% endblock %}
 
 {% block body %}
-    <h1>All Books</h1>
+    <h1>Books</h1>
 
     <ul>
         {% for book in books %}
             <li>
-                {{ book[1].title }}, {{ book[0].name }}
-                <a href="{{ url_for('book', book_id=book[1].id) }}">Details</a>
+                <a href="{{ url_for('book', book_id=book.id) }}">
+                    {{ book.title }}
+                </a>
             </li>
         {% endfor %}
     </ul>
+
+    <h1>Authors</h1>
+    <ul>
+        {% for author in authors %}
+            <li>
+                <a href="{{ url_for('author', author_id=author.id) }}">{{ author.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
 
 {% endblock %}

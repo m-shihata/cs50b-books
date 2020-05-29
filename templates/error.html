@@ -5,7 +5,9 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Error</h1>
-    {{ message }}
-    <a href="/">Back to search</a>
+    <div class="d-flex flex-column">
+        <h1 class="display-4">Error</h1>
+        {{ message }}
+        <a href="/">Back to search</a>
+    </div>
 {% endblock %}
