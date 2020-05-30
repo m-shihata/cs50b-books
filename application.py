@@ -24,7 +24,7 @@ def books():
         return render_template("error.html", message="You must type something!")
 
     books = Book.query.filter(Book.title.like(f"%{s}%")).order_by(Book.title).all()
-    authors = Author.query.filter(Book.title.like(f"%{s}%")).order_by(Author.name).all()
+    authors = Author.query.filter(Author.name.like(f"%{s}%")).order_by(Author.name).all()
 
     # Make sure flight is valid.
     if len(books) == 0 and len(authors) == 0:
